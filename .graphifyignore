@@ -1,0 +1,3 @@
+# Librerías de terceros vendorizadas: no aportan valor al grafo de conocimiento
+# del proyecto y su código minificado ahoga las comunidades reales.
+frontend/vendor/

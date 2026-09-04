@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "nba-backend",
+      "runtimeExecutable": "C:\\Users\\david\\Desktop\\nba-stats-hub\\venv\\Scripts\\python.exe",
+      "runtimeArgs": ["-m", "uvicorn", "backend.main:app", "--app-dir", "C:\\Users\\david\\Desktop\\nba-stats-hub", "--port", "8000"],
+      "port": 8000
+    },
+    {
+      "name": "nba-frontend",
+      "runtimeExecutable": "C:\\Users\\david\\Desktop\\nba-stats-hub\\venv\\Scripts\\python.exe",
+      "runtimeArgs": ["-m", "http.server", "5500", "--directory", "C:\\Users\\david\\Desktop\\nba-stats-hub\\frontend"],
+      "port": 5500
+    }
+  ]
+}

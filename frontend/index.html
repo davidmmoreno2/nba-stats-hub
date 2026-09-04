@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NBA Stats Hub</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">NBA</span>
+      <span class="brand-name">Stats Hub</span>
+    </a>
+
+    <div class="search-wrap">
+      <input
+        id="searchInput"
+        type="text"
+        autocomplete="off"
+        placeholder="Busca un jugador (ej. Dončić, Gobert, Curry...)"
+      />
+      <ul id="searchResults" class="search-results" hidden></ul>
+    </div>
+  </header>
+
+  <main>
+    <section id="emptyState" class="empty-state">
+      <p>🏀 Busca un jugador de la temporada 2025-26 para ver sus comparables.</p>
+    </section>
+
+    <section id="errorState" class="error-state" hidden>
+      <p id="errorMessage"></p>
+    </section>
+
+    <section id="result" class="result" hidden>
+      <div class="target-card" id="targetCard"></div>
+
+      <div class="controls-row">
+        <label for="topN">Nº de comparables:</label>
+        <select id="topN">
+          <option value="5">5</option>
+          <option value="10" selected>10</option>
+          <option value="15">15</option>
+          <option value="20">20</option>
+        </select>
+      </div>
+
+      <div class="comparison-grid">
+        <div class="panel radar-panel">
+          <h2>Radar comparativo</h2>
+          <p class="hint">Marca hasta 4 jugadores de la lista para superponerlos en el radar.</p>
+          <canvas id="radarChart"></canvas>
+        </div>
+
+        <div class="panel similar-panel">
+          <h2>Jugadores más parecidos</h2>
+          <ul id="similarList" class="similar-list"></ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="vendor/chart.umd.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
