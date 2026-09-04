@@ -14,7 +14,7 @@ from nba_api.stats.endpoints import commonplayerinfo
 LEBRON_JAMES_ID = 2544
 
 try:
-    resp = commonplayerinfo.CommonPlayerInfo(player_id=LEBRON_JAMES_ID, timeout=30)
+    resp = commonplayerinfo.CommonPlayerInfo(player_id=LEBRON_JAMES_ID, timeout=90)
     df = resp.get_data_frames()[0]
     row = df.iloc[0]
     print(f"OK: {row['DISPLAY_FIRST_LAST']} - {row['TEAM_NAME']} ({row['TEAM_ABBREVIATION']})")
